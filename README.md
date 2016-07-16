@@ -1,5 +1,0 @@
-# OpenSCAD modules
-
-## modules
-
-* CoverForBox
