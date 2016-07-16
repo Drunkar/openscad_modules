@@ -3,3 +3,5 @@
 ## modules
 
 * CoverForBox
+
+![CoverForBox.png](https://github.com/Drunkar/openscad_modules/blob/images/CoverForBox.png)
