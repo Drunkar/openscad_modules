@@ -1,7 +1,7 @@
 use <ArcOfCylinder.scad>;
 
 // parameters for extendable pipe
-HEIGHT_BODY = 30;
+HEIGHT_BODY = 10;
 HEIGHT_JOINT = 5;
 R_OUTER = 3;
 R_INNER = 2;
@@ -32,10 +32,13 @@ module ExtendablePipe(
         }
     }
     
-    // joint
-    translate([0, 0, h_joint])
-        ArcOfCylinder(r_outer=r_inner, r_inner=r_inner-1, height=h, angle=300);
-    ArcOfCylinder(r_outer=r_inner, r_inner=r_inner-1, height=h_joint, angle=55);
+    // joint    
+    translate([0, 0, h]) {
+        translate([0, 0, -2])
+            cylinder(r=r_inner, h=2);
+        ArcOfCylinder(r_outer=r_inner-0.2, r_inner=0, height=h_joint, angle=300);
+    }
+    ArcOfCylinder(r_outer=r_inner, r_inner=1, height=h_joint, angle=50);
 }
 
 // main
