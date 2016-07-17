@@ -10,7 +10,6 @@ CoverForBox(
     y_outer=10,
     x_inner=18,
     y_inner=8,
-    box_wall_chickness=2,
     top_plate_chickness=3,
     wall_chickness=2,
     wall_height=10
