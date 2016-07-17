@@ -6,8 +6,8 @@ Y_INNER = 95.5;
 
 // parameters for cover
 PLATE_CHICKNESS = 3;
-VERTICAL_WALL_CHICKNESS = 3;
-VERTICAL_WALL_HEIGHT = 10;
+WALL_CHICKNESS = 2;
+WALL_HEIGHT = 10;
 
 
 module Frame(x_outer=20, y_outer=10, x_inner=18, y_inner=8, chickness=1) {
@@ -18,29 +18,53 @@ module Frame(x_outer=20, y_outer=10, x_inner=18, y_inner=8, chickness=1) {
     }
 }
 
-// main
-difference() {
-    cube([X_OUTER, Y_OUTER, PLATE_CHICKNESS]);
-    
+module CoverForBox(
+    x_outer=20,
+    y_outer=10,
+    x_inner=18,
+    y_inner=8,
+    box_wall_chickness=2,
+    top_plate_chickness=3,
+    wall_chickness=2,
+    wall_height=10
+) {
+    difference() {
+        cube([x_outer, y_outer, top_plate_chickness]);
+        
+        // groove for box wall
+        translate([0, 0, -1]) {
+            Frame(
+                x_outer=x_outer,
+                y_outer=y_outer,
+                x_inner=x_inner,
+                y_inner=y_inner,
+                chickness=top_plate_chickness
+            );
+        }
+    }
+
+    // vertical wall
+    translate([
+        -wall_chickness,
+        -wall_chickness,
+        -wall_height+top_plate_chickness
+    ])
     Frame(
-        x_outer=X_OUTER,
-        y_outer=Y_OUTER,
-        x_inner=X_INNER,
-        y_inner=Y_INNER,
-        chickness=2
+        x_outer=x_outer+wall_chickness*2,
+        y_outer=y_outer+wall_chickness*2,
+        x_inner=x_inner+box_wall_chickness,
+        y_inner=y_inner+box_wall_chickness,
+        chickness=wall_height
     );
 }
 
-// vertical wall
-translate([
-    -VERTICAL_WALL_CHICKNESS,
-    -VERTICAL_WALL_CHICKNESS,
-    -VERTICAL_WALL_HEIGHT+PLATE_CHICKNESS
-])
-    Frame(
-        x_outer=X_OUTER+VERTICAL_WALL_CHICKNESS*2,
-        y_outer=Y_OUTER+VERTICAL_WALL_CHICKNESS*2,
-        x_inner=X_OUTER,
-        y_inner=Y_OUTER,
-        chickness=VERTICAL_WALL_HEIGHT
-    );
+// main
+CoverForBox(
+    x_outer=X_OUTER, 
+    y_outer=Y_OUTER,
+    x_inner=X_INNER,
+    y_inner=Y_INNER,
+    top_plate_chickness=PLATE_CHICKNESS,
+    wall_chickness=WALL_CHICKNESS,
+    wall_height=WALL_HEIGHT
+);

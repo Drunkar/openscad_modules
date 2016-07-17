@@ -5,7 +5,16 @@
 * CoverForBox
 
 ```
-CoverForBox(x_outer=20, y_outer=10, x_inner=18, y_inner=8, chickness=1);
+CoverForBox(
+    x_outer=20,
+    y_outer=10,
+    x_inner=18,
+    y_inner=8,
+    box_wall_chickness=2,
+    top_plate_chickness=3,
+    wall_chickness=2,
+    wall_height=10
+);
 ```
 
 ![CoverForBox.png](https://github.com/Drunkar/openscad_modules/blob/images/CoverForBox.png)
