@@ -2,6 +2,14 @@
 
 ## modules
 
+* ArcOfCylinder
+
+```
+ArcOfCylinder(r_outer=5, r_inner=4, height=10, angle=280);
+```
+
+![ArcOfCylinder.png](https://github.com/Drunkar/openscad_modules/blob/images/ArcOfCylinder.png)
+
 * CoverForBox
 
 ```
