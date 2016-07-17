@@ -1,11 +1,13 @@
+use <ArcOfCylinder.scad>;
+
 // parameters for extendable pipe
-HEIGHT_BODY = 100;
-HEIGHT_JOINT = 20;
-R_OUTER = 30;
-R_INNER = 28;
-NUM_GROOVE = 20;
-DEPTH_OF_GROOVE = 1;
-WIDTH_OF_GROOVE = 2;
+HEIGHT_BODY = 30;
+HEIGHT_JOINT = 10;
+R_OUTER = 3;
+R_INNER = 2;
+NUM_GROOVE = 10;
+DEPTH_OF_GROOVE = 0.5;
+WIDTH_OF_GROOVE = 0.5;
 
 
 module ExtendablePipe(
@@ -31,24 +33,9 @@ module ExtendablePipe(
     }
     
     // joint
-    difference() {
-        cylinder(r=r_inner, h=h+h_joint);
-        cylinder(r=r_inner-2, h=h+h_joint);
-        cylinder(r=r_inner, h=h_joint);
-        
-        translate([-r_inner, 0, h+h_joint/2])
-            cube([5, 10, h_joint], center=true);
-    }
-    intersection() {
-        difference() {
-            cylinder(r=r_inner, h=h_joint);
-            cylinder(r=r_inner-2, h=h_joint);
-        }
-        
-        translate([-r_inner, 0, h_joint/2])
-            cube([5, 10, h_joint], center=true);
-    }
-
+    translate([0, 0, h_joint])
+        ArcOfCylinder(r_outer=r_inner, r_inner=r_inner-1, height=h, angle=300);
+    ArcOfCylinder(r_outer=r_inner, r_inner=r_inner-1, height=h_joint, angle=55);
 }
 
 // main
