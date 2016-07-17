@@ -2,7 +2,7 @@ use <ArcOfCylinder.scad>;
 
 // parameters for extendable pipe
 HEIGHT_BODY = 30;
-HEIGHT_JOINT = 10;
+HEIGHT_JOINT = 5;
 R_OUTER = 3;
 R_INNER = 2;
 NUM_GROOVE = 10;
