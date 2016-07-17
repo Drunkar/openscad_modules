@@ -21,14 +21,6 @@ CoverForBox(
 * ExtendablePipe
 
 ```
-ExtendablePipe(num_cylinder=6, r=14, r_cylinder=1, h_cylinder=5);
-```
-
-![ExtendablePipe.png](https://github.com/Drunkar/openscad_modules/blob/images/ExtendablePipe.png)
-
-* CylinderCircle
-
-```
 ExtendablePipe(
     h=100,
     h_joint=20,
@@ -38,6 +30,14 @@ ExtendablePipe(
     depth_of_groove=1,
     width_of_groove=2
 );
+```
+
+![ExtendablePipe.png](https://github.com/Drunkar/openscad_modules/blob/images/ExtendablePipe.png)
+
+* CylinderCircle
+
+```
+CylinderCircle(num_cylinder=6, r=14, r_cylinder=1, h_cylinder=5);
 ```
 
 ![CylinderCircle.png](https://github.com/Drunkar/openscad_modules/blob/images/CylinderCircle.png)
