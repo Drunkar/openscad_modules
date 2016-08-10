@@ -49,7 +49,7 @@ module HoneyCombCylinderConvex(
         // offset
         translate([0, 0, -(1000)/2])
             cube([1000, 1000, 1000+offset_bottom*2], center=true);
-        translate([0, 0, (H_CYLINDER+1000/2)])
+        translate([0, 0, (h_cylinder+1000/2)])
             cube([1000, 1000, (1000+offset_top*2)], center=true);
     }
 }
