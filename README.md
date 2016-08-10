@@ -58,6 +58,14 @@ ExtendablePipe(
 
 ![ExtendablePipe.png](https://github.com/Drunkar/openscad_modules/blob/images/ExtendablePipe.png)
 
+* HexaCylinderCircleHorizontal
+
+```
+HexaCylinderCircleHorizontal(num_cylinder=6, r=14, r_honeycomb=1, h_honeycomb=5);
+```
+
+![HexaCylinderCircleHorizontal.png](https://github.com/Drunkar/openscad_modules/blob/images/HexaCylinderCircleHorizontal.png)
+
 * HoneyCombCylinder
 
 ```
