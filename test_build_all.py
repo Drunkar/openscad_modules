@@ -6,10 +6,12 @@ import subprocess
 
 CMD = "openscad -o ${CIRCLE_ARTIFACTS}/"
 
+
 def test_build_all():
     for file in glob("modules/*.scad"):
         output_file = os.path.splitext(os.path.basename(file))[0]
-        function_stdout = subprocess.check_output(CMD + output_file + ".stl " + file)
+        function_stdout = subprocess.check_output(
+            ["openscad", "-o", "${CIRCLE_ARTIFACTS}/" + output_file + ".stl", file])
         error_count = function_stdout.count("ERROR")
         warning_count = function_stdout.count("WARNING")
         expect = 0
