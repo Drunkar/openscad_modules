@@ -5,7 +5,8 @@ dependencies:
     pre:
         - sudo apt-get update
         - sudo apt-get install openscad
+        - pip install -r configfile/requirements-dev.txt
 
 test:
     post:
-        - openscad -o ${CIRCLE_ARTIFACTS}/ArcOfCylinder.stl modules/ArcOfCylinder.scad | egrep -c 'ERROR|WARNING' | xargs return
+        - invoke test
