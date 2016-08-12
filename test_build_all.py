@@ -4,14 +4,14 @@ import os
 from glob import glob
 import subprocess
 
-CMD = "openscad -o ${CIRCLE_ARTIFACTS}/"
-
+CMD = "openscad -o "
+OUTPUT_PATH = os.environ["CIRCLE_ARTIFACTS"]
 
 def test_build_all():
     for file in glob("modules/*.scad"):
         output_file = os.path.splitext(os.path.basename(file))[0]
         function_stdout = subprocess.check_output(
-            ["openscad", "-o", "${CIRCLE_ARTIFACTS}/" + output_file + ".stl", file])
+            ["openscad", "-o", OUTPUT_PATH + "/" + output_file + ".stl", file])
         error_count = function_stdout.count(b"ERROR")
         warning_count = function_stdout.count(b"WARNING")
         expect = 0
