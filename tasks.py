@@ -4,4 +4,4 @@ import invoke
 
 @invoke.task
 def test(ctx):
-    invoke.run("nosetests -v")
+    invoke.run("nosetests -v -s")
