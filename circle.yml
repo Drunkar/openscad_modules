@@ -8,4 +8,4 @@ dependencies:
 
 test:
     post:
-        - openscad -o ${CIRCLE_ARTIFACTS}/ArcOfCylinder.stl modules/ArcOfCylinder.scad
+        - openscad -o ${CIRCLE_ARTIFACTS}/ArcOfCylinder.stl modules/ArcOfCylinder.scad | egrep -c 'ERROR|WARNING' | xargs return
