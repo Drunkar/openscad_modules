@@ -10,7 +10,7 @@ WALL_CHICKNESS = 2;
 WALL_HEIGHT = 10;
 
 
-module Frame(x_outer=20, y_outer=10, x_inner=18, y_inner=8, chickness=1) {
+module Frame(x_outer, y_outer, x_inner, y_inner, chickness) {
     difference() {
         cube([x_outer, y_outer, chickness]);
         translate([(x_outer-x_inner)/2, (y_outer-y_inner)/2, 0])
@@ -18,15 +18,8 @@ module Frame(x_outer=20, y_outer=10, x_inner=18, y_inner=8, chickness=1) {
     }
 }
 
-module CoverForBox(
-    x_outer=20,
-    y_outer=10,
-    x_inner=18,
-    y_inner=8,
-    top_plate_chickness=3,
-    wall_chickness=2,
-    wall_height=10
-) {
+module CoverForBox(x_outer, y_outer, x_inner, y_inner, top_plate_chickness,
+                   wall_chickness, wall_height) {
     difference() {
         cube([x_outer, y_outer, top_plate_chickness]);
         
@@ -58,12 +51,5 @@ module CoverForBox(
 }
 
 // main
-CoverForBox(
-    x_outer=X_OUTER, 
-    y_outer=Y_OUTER,
-    x_inner=X_INNER,
-    y_inner=Y_INNER,
-    top_plate_chickness=PLATE_CHICKNESS,
-    wall_chickness=WALL_CHICKNESS,
-    wall_height=WALL_HEIGHT
-);
+CoverForBox(X_OUTER, Y_OUTER, X_INNER, Y_INNER, PLATE_CHICKNESS,
+            WALL_CHICKNESS, WALL_HEIGHT);

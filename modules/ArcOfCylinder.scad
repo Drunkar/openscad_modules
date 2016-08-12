@@ -30,7 +30,7 @@ module EquilateralPrism(a, h){
 /*
  * defference in pipe, prism and cube.
 */
-module ArcOfCylinder(r_outer=5, r_inner=4, height=10, angle=280) {
+module ArcOfCylinder(r_outer, r_inner, height, angle) {
 
     prism_angle = angle>=180? 360 - angle: angle;
     bottom_edge_length = 2 * r_outer * sin(prism_angle / 2);
@@ -69,16 +69,6 @@ module ArcOfCylinder(r_outer=5, r_inner=4, height=10, angle=280) {
 }
 
 // main
-ArcOfCylinder(
-    r_outer=R_OUTER,
-    r_inner=R_INNER,
-    height=HEIGHT,
-    angle=ANGLE1
-);
+ArcOfCylinder(R_OUTER, R_INNER, HEIGHT, ANGLE1);
 translate([20, 0, 0])
-    ArcOfCylinder(
-        r_outer=R_OUTER,
-        r_inner=R_INNER,
-        height=HEIGHT,
-        angle=ANGLE2
-    );
+    ArcOfCylinder(R_OUTER, R_INNER, HEIGHT, ANGLE2);

@@ -10,15 +10,8 @@ DEPTH_OF_GROOVE = 0.5;
 WIDTH_OF_GROOVE = 0.5;
 
 
-module ExtendablePipe(
-    h=100,
-    h_joint=20,
-    r_outer=30,
-    r_inner=28,
-    num_groove=20,
-    depth_of_groove=1,
-    width_of_groove=2
-) {
+module ExtendablePipe(h, h_joint, r_outer, r_inner, num_groove,
+                      depth_of_groove, width_of_groove) {
     difference() {
         cylinder(r=r_outer, h=h);
         cylinder(r=r_inner, h=h);
@@ -42,12 +35,5 @@ module ExtendablePipe(
 }
 
 // main
-ExtendablePipe(
-    h=HEIGHT_BODY,
-    h_joint=HEIGHT_JOINT,
-    r_outer=R_OUTER,
-    r_inner=R_INNER,
-    num_groove=NUM_GROOVE,
-    depth_of_groove=DEPTH_OF_GROOVE,
-    width_of_groove=WIDTH_OF_GROOVE
-);
+ExtendablePipe(HEIGHT_BODY, HEIGHT_JOINT, R_OUTER, R_INNER, NUM_GROOVE,
+               DEPTH_OF_GROOVE, width_of_groove=WIDTH_OF_GROOVE);
