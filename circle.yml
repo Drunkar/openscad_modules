@@ -3,7 +3,7 @@ machine:
 
 dependencies:
     pre:
-        - sudo ape-get update
+        - sudo apt-get update
         - sudo apt-get install openscad
 
 test:
