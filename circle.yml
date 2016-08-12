@@ -5,7 +5,8 @@ dependencies:
     pre:
         - sudo apt-get update
         - sudo apt-get install openscad
-        - pip install -r configfile/requirements-dev.txt
+        - sudo pip install --upgrade pip
+        - sudo pip install -r requirements-dev.txt
 
 test:
     post:
