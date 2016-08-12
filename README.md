@@ -11,6 +11,7 @@ MIT License.
 - [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
 - [HoneyCombCylinder](#honeycombcylinder)
 - [HoneyCombCylinderConvex](#honeycombcylinderconvex)
+- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
 
 <!-- /MarkdownTOC -->
 
@@ -112,3 +113,18 @@ HoneyCombCylinderConvex(
 ```
 
 ![HoneyCombCylinderConvex.png](https://github.com/Drunkar/openscad_modules/blob/images/HoneyCombCylinderConvex.png)
+
+### TrussBeamTwoDimensions
+
+```
+TrussBeamTwoDimensions(
+    x=320,
+    y=50,
+    thickness=3,
+    rod_height=5,
+    truss_width=2,
+    truss_angle=70
+);
+```
+
+![TrussBeamTwoDimensions.png](https://github.com/Drunkar/openscad_modules/blob/images/TrussBeamTwoDimensions.png)
