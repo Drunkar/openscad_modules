@@ -44,7 +44,7 @@ module ArcOfCylinder(r_outer, r_inner, height, angle) {
     if (angle >= 180) {
 
         difference() {
-            Pipe(r_outer=r_outer, r_inner=r, height=height);
+            Pipe(r_outer=r_outer, r_inner=r_inner, height=height);
             translate([-target_trinangle_height, 0, 0])
                 scale([x_scale, 1, 1])
                     EquilateralPrism(a=bottom_edge_length, h=height);
