@@ -48,5 +48,5 @@ module HoneyCombCylinderConvex(num_row_of_hex, num_hex_in_row,
 }
 
 // main
-HoneyCombCylinderConvex(NUM_ROW_OF_HEX, NUM_HEX_IN_ROW,　R_CYLINDER,　H_CYLINDER,
-                    　　　R_HONEYCOMB,　H_HONEYCOMB,　OFFSET_TOP,　OFFSET_BOTTOM);
+HoneyCombCylinderConvex(NUM_ROW_OF_HEX, NUM_HEX_IN_ROW, R_CYLINDER, H_CYLINDER,
+                        R_HONEYCOMB, H_HONEYCOMB, OFFSET_TOP, OFFSET_BOTTOM);

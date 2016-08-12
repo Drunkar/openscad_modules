@@ -8,10 +8,10 @@ module HexaCylinderCircleHorizontal(num_cylinder, r_circle, r_honeycomb, h_honey
     for ( i = [0 : num_cylinder] ) {
         rotate( i * 360 / num_cylinder, [0, 0, 1])
             rotate(90, [0, 1, 0])
-                translate([0, 0, r])
+                translate([0, 0, r_circle])
                     cylinder(r=r_honeycomb, h=h_honeycomb, $fn=6);
     }
 }
 
 // main
-HexaCylinderCircleHorizontal(NUM_CYLINDER, R_CIRCLE, R_CYLINDER, H_CYLINDER);
+HexaCylinderCircleHorizontal(NUM_CYLINDER, R_CIRCLE, R_HONEYCOMB, H_HONEYCOMB);

@@ -15,12 +15,12 @@ module HoneyCombCylinder(num_row_of_hex, num_hex_in_row, r_cylinder, h_cylinder,
                          thickness, r_honeycomb, h_honeycomb, offset_top, offset_bottom) {
     difference() {
         cylinder(r=r_cylinder, h=h_cylinder);
-        HoneyCombCylinderConvex(num_row_of_hex, um_hex_in_row, r_cylinder-thickness,
+        HoneyCombCylinderConvex(num_row_of_hex, num_hex_in_row, r_cylinder-thickness,
                                 h_cylinder, r_honeycomb, h_honeycomb,
                                 offset_top, offset_bottom);
     }
 }
 
-// main
+// mainum_um
 HoneyCombCylinder(NUM_ROW_OF_HEX, NUM_HEX_IN_ROW, R_CYLINDER, H_CYLINDER,
                   THICKNESS, R_HONEYCOMB, H_HONEYCOMB, OFFSET_TOP, OFFSET_BOTTOM);
