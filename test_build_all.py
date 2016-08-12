@@ -5,14 +5,16 @@ from glob import glob
 import subprocess
 
 CMD = "openscad -o ${CIRCLE_ARTIFACTS}/"
-GREP = " | egrep -c 'ERROR|WARNING'"
 
 def test_build_all():
     for file in glob("modules/*.scad"):
         output_file = os.path.splitext(os.path.basename(file))[0]
-        function = subprocess.getoutput(CMD + output_file + ".stl " + file + GREP)
-        expect = "0"
+        function_stdout = subprocess.check_output(CMD + output_file + ".stl " + file)
+        error_count = function_stdout.count("ERROR")
+        warning_count = function_stdout.count("WARNING")
+        expect = 0
         try:
-            assert function == expect
+            assert error_count + warning_count == expect
         except AssertionError:
-            raise Exception("Expect " + str(expect) + ", but the result was " + str(function) + ".")
+            print(function_stdout)
+            raise Exception("ERROR or WARNING exists!")
