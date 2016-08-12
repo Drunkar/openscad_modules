@@ -8,4 +8,4 @@ dependencies:
 
 test:
     post:
-        - openscad -o ArcOfCylinder.stl modules/ArcOfCylinder.scad
+        - openscad -o ${CIRCLE_ARTIFACTS}/ArcOfCylinder.stl modules/ArcOfCylinder.scad
