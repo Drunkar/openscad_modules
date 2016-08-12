@@ -3,7 +3,7 @@ machine:
 
 dependencies:
     pre:
-        - apt-get update; apt-get install openscad
+        - apt-get install openscad
 
 test:
     post:
