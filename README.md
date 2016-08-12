@@ -31,8 +31,8 @@ CoverForBox(
     y_outer=10,
     x_inner=18,
     y_inner=8,
-    top_plate_chickness=3,
-    wall_chickness=2,
+    top_plate_thickness=3,
+    wall_thickness=2,
     wall_height=10
 );
 ```
@@ -87,7 +87,7 @@ HoneyCombCylinder(
     num_hex_in_row=8,
     r_cylinder=10,
     h_cylinder=30,
-    chickness=1,
+    thickness=1,
     r_honeycomb=3,
     h_honeycomb=5,
     offset_top=3,

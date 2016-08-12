@@ -1,7 +1,7 @@
 // parameters for extendable pipe
 X = 320;
 Y = 50;
-CHICKNESS = 3;
+THICKNESS = 3;
 ROD_HEIGHT = 5;
 TRUSS_WIDTH = 2;
 TRUSS_ANGLE = 70;
@@ -36,4 +36,4 @@ module TrussBeamTwoDimensions(x, y, thickness, rod_height,
 }
 
 // main
-TrussBeamTwoDimensions(X, Y, CHICKNESS, ROD_HEIGHT, TRUSS_WIDTH, TRUSS_ANGLE);
+TrussBeamTwoDimensions(X, Y, THICKNESS, ROD_HEIGHT, TRUSS_WIDTH, TRUSS_ANGLE);

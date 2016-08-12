@@ -5,23 +5,23 @@ X_INNER = 316;
 Y_INNER = 95.5;
 
 // parameters for cover
-PLATE_CHICKNESS = 3;
-WALL_CHICKNESS = 2;
+PLATE_THICKNESS = 3;
+WALL_THICKNESS = 2;
 WALL_HEIGHT = 10;
 
 
-module Frame(x_outer, y_outer, x_inner, y_inner, chickness) {
+module Frame(x_outer, y_outer, x_inner, y_inner, thickness) {
     difference() {
-        cube([x_outer, y_outer, chickness]);
+        cube([x_outer, y_outer, thickness]);
         translate([(x_outer-x_inner)/2, (y_outer-y_inner)/2, 0])
-            cube([x_inner, y_inner, chickness]);
+            cube([x_inner, y_inner, thickness]);
     }
 }
 
-module CoverForBox(x_outer, y_outer, x_inner, y_inner, top_plate_chickness,
-                   wall_chickness, wall_height) {
+module CoverForBox(x_outer, y_outer, x_inner, y_inner, top_plate_thickness,
+                   wall_thickness, wall_height) {
     difference() {
-        cube([x_outer, y_outer, top_plate_chickness]);
+        cube([x_outer, y_outer, top_plate_thickness]);
         
         // groove for box wall
         translate([0, 0, -1]) {
@@ -30,26 +30,26 @@ module CoverForBox(x_outer, y_outer, x_inner, y_inner, top_plate_chickness,
                 y_outer=y_outer,
                 x_inner=x_inner,
                 y_inner=y_inner,
-                chickness=top_plate_chickness
+                thickness=top_plate_thickness
             );
         }
     }
 
     // vertical wall
     translate([
-        -wall_chickness,
-        -wall_chickness,
-        -wall_height+top_plate_chickness
+        -wall_thickness,
+        -wall_thickness,
+        -wall_height+top_plate_thickness
     ])
     Frame(
-        x_outer=x_outer+wall_chickness*2,
-        y_outer=y_outer+wall_chickness*2,
+        x_outer=x_outer+wall_thickness*2,
+        y_outer=y_outer+wall_thickness*2,
         x_inner=x_outer,
         y_inner=y_outer,
-        chickness=wall_height
+        thickness=wall_height
     );
 }
 
 // main
-CoverForBox(X_OUTER, Y_OUTER, X_INNER, Y_INNER, PLATE_CHICKNESS,
-            WALL_CHICKNESS, WALL_HEIGHT);
+CoverForBox(X_OUTER, Y_OUTER, X_INNER, Y_INNER, PLATE_THICKNESS,
+            WALL_THICKNESS, WALL_HEIGHT);
