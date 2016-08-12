@@ -1,10 +1,6 @@
-language: python
- 
-python:
-- "3.5"
-
 machine:
     timezone: Asia/Tokyo
+    python: 3.5
 
 dependencies:
     pre:
