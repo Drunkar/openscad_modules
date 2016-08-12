@@ -42,7 +42,7 @@ CoverForBox(
 ### CylinderCircle
 
 ```
-CylinderCircle(num_cylinder=6, r=14, r_cylinder=1, h_cylinder=5);
+CylinderCircle(num_cylinder=6, r_circle=14, r_cylinder=1, h_cylinder=5);
 ```
 
 ![CylinderCircle.png](https://github.com/Drunkar/openscad_modules/blob/images/CylinderCircle.png)
@@ -50,7 +50,7 @@ CylinderCircle(num_cylinder=6, r=14, r_cylinder=1, h_cylinder=5);
 ### CylinderCircleHorizontal
 
 ```
-CylinderCircleHorizontal(num_cylinder=6, r=14, r_cylinder=1, h_cylinder=5);
+CylinderCircleHorizontal(num_cylinder=6, r_circle=14, r_cylinder=1, h_cylinder=5);
 ```
 
 ![CylinderCircleHorizontal.png](https://github.com/Drunkar/openscad_modules/blob/images/CylinderCircleHorizontal.png)
@@ -74,7 +74,7 @@ ExtendablePipe(
 ### HexaCylinderCircleHorizontal
 
 ```
-HexaCylinderCircleHorizontal(num_cylinder=6, r=14, r_honeycomb=1, h_honeycomb=5);
+HexaCylinderCircleHorizontal(num_cylinder=6, r_circle=14, r_honeycomb=1, h_honeycomb=5);
 ```
 
 ![HexaCylinderCircleHorizontal.png](https://github.com/Drunkar/openscad_modules/blob/images/HexaCylinderCircleHorizontal.png)
