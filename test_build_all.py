@@ -5,4 +5,9 @@ import commands
 CMD = "openscad -o ${CIRCLE_ARTIFACTS}/ArcOfCylinder.stl "
 GREP = " | egrep -c 'ERROR|WARNING'"
 
-assert commands.getoutput(CMD + "modules/ArcOfCylinder.scad" + GREP) == "0"
+function = commands.getoutput(CMD + "modules/ArcOfCylinder.scad" + GREP)
+expect = "0"
+try:
+    assert function == expect
+except AssertionError:
+    print("Expect " + str(expect) + ", but the result was " + str(function) + ".")
