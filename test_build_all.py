@@ -12,8 +12,8 @@ def test_build_all():
         output_file = os.path.splitext(os.path.basename(file))[0]
         function_stdout = subprocess.check_output(
             ["openscad", "-o", "${CIRCLE_ARTIFACTS}/" + output_file + ".stl", file])
-        error_count = function_stdout.count("ERROR")
-        warning_count = function_stdout.count("WARNING")
+        error_count = function_stdout.count(b"ERROR")
+        warning_count = function_stdout.count(b"WARNING")
         expect = 0
         try:
             assert error_count + warning_count == expect
