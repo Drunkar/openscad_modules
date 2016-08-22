@@ -1,3 +1,8 @@
+general:
+    branches:
+        ignore:
+            - images
+
 machine:
     timezone: Asia/Tokyo
     python:
