@@ -10,13 +10,7 @@ machine:
 
 dependencies:
     pre:
-        - mkdir -p /home/ubuntu/deb
-        - cd /home/ubuntu/deb && pwd
-        - wget https://launchpad.net/~openscad/+archive/ubuntu/releases/+build/7368891/+files/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && ls
-        - cd /home/ubuntu/deb && curl -O https://launchpad.net/~openscad/+archive/ubuntu/releases/+build/7368891/+files/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && ls
-        - ls
-        - ls /home/ubuntu/deb
-        - cd /home/ubuntu/deb && curl -O https://launchpad.net/~openscad/+archive/ubuntu/releases/+build/7368891/+files/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && sudo dpkg -i /home/ubuntu/deb/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && ls
+        - wget https://launchpad.net/~openscad/+archive/ubuntu/releases/+build/7368891/+files/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && sudo dpkg -i penscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb
         - sudo apt-get update
         - sudo apt-get install openscad
         - sudo pip install --upgrade pip
