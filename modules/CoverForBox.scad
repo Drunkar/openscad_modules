@@ -1,5 +1,5 @@
 // parameters for box covered by this module
-//X_OUTER = 321;
+X_OUTER = 321;
 Y_OUTER = 101;
 X_INNER = 316;
 Y_INNER = 95.5;
