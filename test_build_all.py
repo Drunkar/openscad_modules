@@ -25,5 +25,5 @@ def test_build_all():
             assert error_count + warning_count == expect
         except AssertionError:
             print("stdout: " + out.decode("utf-8"))
-            print("stderr: " + err.decode("utf-8")
+            print("stderr: " + err.decode("utf-8"))
             raise Exception("ERROR or WARNING exists!")
