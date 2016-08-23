@@ -17,6 +17,7 @@ def test_build_all():
         error_count = function_stdout.count(b"ERROR")
         warning_count = function_stdout.count(b"WARNING")
         expect = 0
+        print(function_stdout)
         print(error_count)
         print(warning_count)
         try:
