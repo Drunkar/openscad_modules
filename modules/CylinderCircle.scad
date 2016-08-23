@@ -4,7 +4,7 @@ R_CIRCLE = 14;
 R_CYLINDER = 1;
 H_CYLINDER = 5;
 
-module CylinderCircle(num_cylinder, r_circle, r_cylinder, h_cylinde) {
+module CylinderCircle(num_cylinder, r_circle, r_cylinder, h_cylinder) {
     for ( i = [0 : num_cylinder] ) {
         rotate( i * 360 / num_cylinder, [0, 0, 1])
             translate([0, r_circle, 0])
