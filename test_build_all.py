@@ -13,7 +13,7 @@ def test_build_all():
         print("----------------------------------------------------")
         print(file)
         output_file = os.path.splitext(os.path.basename(file))[0]
-        p = subprocess.run(["openscad", "-o", OUTPUT_PATH + "/" + output_file + ".stl", file],
+        p = subprocess.Popen(["openscad", "-o", OUTPUT_PATH + "/" + output_file + ".stl", file],
                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         function_stdout, function_stderr = stdout_data, stderr_data = p.communicate()
         error_count = function_stdout.count(b"ERROR")
