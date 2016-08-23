@@ -20,7 +20,7 @@ def test_build_all():
         warning_count = err.count(b"WARNING") + out.count(b"WARNING")
         expect = 0
         print(out)
-        print(error)
+        print(err)
         try:
             assert error_count + warning_count == expect
         except AssertionError:
