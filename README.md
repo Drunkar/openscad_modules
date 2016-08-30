@@ -12,6 +12,7 @@ MIT License.
 - [HoneyCombCylinder](#honeycombcylinder)
 - [HoneyCombCylinderConvex](#honeycombcylinderconvex)
 - [Pipe](#pipe)
+- [SpaceFrameTrussBeam](#spaceframetrussbeam)
 - [TrussBeamTwoDimensions](#trussbeamtwodimensions)
 
 <!-- /MarkdownTOC -->
@@ -122,6 +123,21 @@ Pipe(r_outer=8, r_inner=6, h=10);
 ```
 
 ![Pipe.png](https://github.com/Drunkar/openscad_modules/blob/images/Pipe.png)
+
+### SpaceFrameTrussBeam
+
+```
+SpaceFrameTrussBeam(
+    x=320,
+    y=50,
+    thickness=3,
+    rod_height=5,
+    truss_width=2,
+    truss_angle=70
+);
+```
+
+![SpaceFrameTrussBeam.png](https://github.com/Drunkar/openscad_modules/blob/images/SpaceFrameTrussBeam.png)
 
 ### TrussBeamTwoDimensions
 
