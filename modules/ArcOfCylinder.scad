@@ -1,4 +1,4 @@
-// parameters for arc of cylinder
+// parameters
 R_OUTER = 5;
 R_INNER = 4;
 HEIGHT = 10;
@@ -27,9 +27,6 @@ module EquilateralPrism(a, h){
     }
 }
 
-/*
- * defference in pipe, prism and cube.
-*/
 module ArcOfCylinder(r_outer, r_inner, height, angle) {
 
     prism_angle = angle>=180? 360 - angle: angle;
@@ -53,7 +50,7 @@ module ArcOfCylinder(r_outer, r_inner, height, angle) {
         }
 
     } else {
-    
+
         intersection() {
             Pipe(r_outer=r_outer, r_inner=r_inner, height=height);
             union() {
@@ -65,7 +62,7 @@ module ArcOfCylinder(r_outer, r_inner, height, angle) {
             }
         }
 
-    }   
+    }
 }
 
 // main

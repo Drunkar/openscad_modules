@@ -1,4 +1,4 @@
-// parameters for cylinder circle
+// parameters
 NUM_CYLINDER = 6;
 R_CIRCLE = 14;
 R_HONEYCOMB = 1;

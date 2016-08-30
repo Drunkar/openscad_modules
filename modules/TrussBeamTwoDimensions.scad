@@ -1,4 +1,4 @@
-// parameters for extendable pipe
+// parameters
 X = 320;
 Y = 50;
 THICKNESS = 3;

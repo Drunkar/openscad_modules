@@ -1,10 +1,9 @@
-// parameters for box covered by this module
+// parameters
 X_OUTER = 321;
 Y_OUTER = 101;
 X_INNER = 316;
 Y_INNER = 95.5;
 
-// parameters for cover
 PLATE_THICKNESS = 3;
 WALL_THICKNESS = 2;
 WALL_HEIGHT = 10;
@@ -22,7 +21,7 @@ module CoverForBox(x_outer, y_outer, x_inner, y_inner, top_plate_thickness,
                    wall_thickness, wall_height) {
     difference() {
         cube([x_outer, y_outer, top_plate_thickness]);
-        
+
         // groove for box wall
         translate([0, 0, -1]) {
             Frame(

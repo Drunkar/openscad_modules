@@ -1,6 +1,6 @@
 use <ArcOfCylinder.scad>;
 
-// parameters for extendable pipe
+// parameters
 HEIGHT_BODY = 10;
 HEIGHT_JOINT = 5;
 R_OUTER = 3;
@@ -8,7 +8,6 @@ R_INNER = 2;
 NUM_GROOVE = 10;
 DEPTH_OF_GROOVE = 0.5;
 WIDTH_OF_GROOVE = 0.5;
-
 
 module ExtendablePipe(h, h_joint, r_outer, r_inner, num_groove,
                       depth_of_groove, width_of_groove) {
@@ -24,8 +23,8 @@ module ExtendablePipe(h, h_joint, r_outer, r_inner, num_groove,
                     cube([width_of_groove, depth_of_groove, h]);
         }
     }
-    
-    // joint    
+
+    // joint
     translate([0, 0, h]) {
         translate([0, 0, -2])
             cylinder(r=r_inner, h=2);

@@ -1,6 +1,6 @@
 use <HoneyCombCylinderConvex.scad>;
 
-// parameters for cylinder circle
+// parameters
 NUM_ROW_OF_HEX = 8;
 NUM_HEX_IN_ROW = 8;
 R_CYLINDER = 10;

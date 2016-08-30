@@ -1,4 +1,4 @@
-// parameters for pipe
+// parameters
 R_OUTER = 8;
 R_INNER = 6;
 HEIGHT = 10;
