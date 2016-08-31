@@ -24,12 +24,13 @@ module SpaceFrameTrussBeam(x, y, thickness, rod_height,
             cube([truss_width, y, thickness]);
     }
 
-    translate([0, rod_height/2, 0])
+    translate([0, thickness/2, 0])
         rotate([60, 0, 0])
             TrussBeamTwoDimensions(x, y, thickness, rod_height, truss_width, truss_angle);
-    translate([0, y*(1-cos(60))-rod_height/2, y*sin(60)])
-        rotate([-60, 0, 0])
-            TrussBeamTwoDimensions(x, y, thickness, rod_height, truss_width, truss_angle);
+    translate([0, y-thickness/2, 0])
+        mirror([0, 1, 0])
+            rotate([60, 0, 0])
+                TrussBeamTwoDimensions(x, y, thickness, rod_height, truss_width, truss_angle);
 }
 
 // main
