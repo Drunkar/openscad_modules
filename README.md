@@ -2,7 +2,7 @@
 
 ![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-![build status](https://circleci.com/gh/a-know/awesome_events.svg?style=shield&circle-token=479a14ac21de4b994b8f90dee2d97d85964884c1)
+![build status](https://circleci.com/gh/Drunkar/openscad_modules.svg?style=shield&circle-token=479a14ac21de4b994b8f90dee2d97d85964884c1)
 
 <!-- MarkdownTOC -->
 
