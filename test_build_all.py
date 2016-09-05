@@ -4,7 +4,6 @@ import os
 from glob import glob
 import subprocess
 
-CMD = "openscad -o "
 OUTPUT_PATH = os.environ["CIRCLE_ARTIFACTS"]
 
 
