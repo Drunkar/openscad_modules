@@ -10,9 +10,7 @@ machine:
 
 dependencies:
     pre:
-        - sudo apt-get update
-        - sudo apt-get install libboost-filesystem1.54.0 libboost-program-options1.54.0  libboost-regex1.54.0 libglew1.10 libopencsg1 libqt5scintilla2-11 libcgal10
-        - wget https://launchpad.net/~openscad/+archive/ubuntu/releases/+build/7368891/+files/openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb && sudo dpkg -i openscad_2015.03-1+dfsg-0.1~trusty1_amd64.deb
+        - sudo add-apt-repository -y ppa:openscad/releases
         - sudo apt-get update
         - sudo apt-get install openscad
         - sudo pip install --upgrade pip
