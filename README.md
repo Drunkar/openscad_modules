@@ -13,6 +13,7 @@
 - [HoneyCombCylinder](#honeycombcylinder)
 - [HoneyCombCylinderConvex](#honeycombcylinderconvex)
 - [Pipe](#pipe)
+- [PipeCircle](#pipecircle)
 - [SpaceFrameTrussBeam](#spaceframetrussbeam)
 - [TrussBeamTwoDimensions](#trussbeamtwodimensions)
 
@@ -124,6 +125,20 @@ Pipe(r_outer=8, r_inner=6, h=10);
 ```
 
 ![Pipe.png](https://github.com/Drunkar/openscad_modules/blob/images/Pipe.png)
+
+### PipeCircle
+
+```
+PipeCircle(
+    num_cylinder=6,
+    r_circle=14,
+    r_pipe_outer=2,
+    r_pipe_inner=1,
+    h_pipe=5
+);
+```
+
+![PipeCircle.png](https://github.com/Drunkar/openscad_modules/blob/images/PipeCircle.png)
 
 ### SpaceFrameTrussBeam
 
