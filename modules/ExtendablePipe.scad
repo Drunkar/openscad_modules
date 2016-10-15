@@ -13,7 +13,7 @@ module ExtendablePipe(h, h_joint, r_outer, r_inner, num_groove,
                       depth_of_groove, width_of_groove) {
     difference() {
         cylinder(r=r_outer, h=h);
-        cylinder(r=r_inner, h=h);
+        cylinder(r=r_inner*1.1, h=h);
         
         // groove
         for ( i = [0 : num_groove] )
@@ -27,10 +27,10 @@ module ExtendablePipe(h, h_joint, r_outer, r_inner, num_groove,
     // joint
     translate([0, 0, h]) {
         translate([0, 0, -2])
-            cylinder(r=r_inner, h=2);
+            cylinder(r=r_inner*1.1, h=2);
         ArcOfCylinder(r_outer=r_inner-0.2, r_inner=0, height=h_joint, angle=300);
     }
-    ArcOfCylinder(r_outer=r_inner, r_inner=1, height=h_joint, angle=50);
+    ArcOfCylinder(r_outer=r_inner*1.1, r_inner=1, height=h_joint, angle=50);
 }
 
 // main
