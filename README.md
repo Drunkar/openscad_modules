@@ -12,6 +12,7 @@
 - [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
 - [HoneyCombCylinder](#honeycombcylinder)
 - [HoneyCombCylinderConvex](#honeycombcylinderconvex)
+- [HoneyCombPlate](#honeycombplate)
 - [Pipe](#pipe)
 - [PipeCircle](#pipecircle)
 - [SpaceFrameTrussBeam](#spaceframetrussbeam)
@@ -117,6 +118,21 @@ HoneyCombCylinderConvex(
 ```
 
 ![HoneyCombCylinderConvex.png](https://github.com/Drunkar/openscad_modules/blob/images/HoneyCombCylinderConvex.png)
+
+### HoneyCombPlate
+
+```
+HoneyCombPlate(
+    X=70,
+    Y=50,
+    THICKNESS=2,
+    PADDING=3,
+    R_HONEYCOMB=3,
+    MARGIN_HONEYCOMB=0.5
+);
+```
+
+![HoneyCombPlate.png](https://github.com/Drunkar/openscad_modules/blob/images/HoneyCombPlate.png)
 
 ### Pipe
 
