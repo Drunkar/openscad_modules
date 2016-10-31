@@ -1,7 +1,7 @@
 // parameters
 X = 70;
 Y = 50;
-THICKNESS = 2;
+THICKNESS = 20;
 PADDING = 3;
 R_HONEYCOMB = 3;
 MARGIN_HONEYCOMB = 0.5;
@@ -21,7 +21,7 @@ module HoneyCombPlate(x, y, thickness, padding, r_honeycomb, margin_honeycomb) {
                     0
                 ])
                 rotate([0, 0, 90])
-                    cylinder(r=r_honeycomb, h=5, $fn=6);
+                    cylinder(r=r_honeycomb, h=thickness, $fn=6);
             }
         }
     }
