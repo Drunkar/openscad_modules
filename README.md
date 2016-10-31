@@ -123,12 +123,12 @@ HoneyCombCylinderConvex(
 
 ```
 HoneyCombPlate(
-    X=70,
-    Y=50,
-    THICKNESS=2,
-    PADDING=3,
-    R_HONEYCOMB=3,
-    MARGIN_HONEYCOMB=0.5
+    x=70,
+    y=50,
+    thickness=2,
+    padding=3,
+    r_honeycomb=3,
+    margin_honeycomb=0.5
 );
 ```
 
