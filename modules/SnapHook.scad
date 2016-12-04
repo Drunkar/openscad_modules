@@ -29,16 +29,17 @@ module SnapHook(x, y, z_box, z_cap, thickness) {
             cube([x-2*thickness, y-2*thickness, z_box]);
 
         // holes
+        h_hole = 1.5*thickness;
         translate([0, 0, z_box]) {
-            translate([x-thickness, thickness+1-0.5, -x/4])
-                cube([thickness, x/4+1, 4*thickness]);
-            translate([x-thickness, y-(thickness+1+x/4)-0.5, -x/4])
-                cube([thickness, x/4+1, 4*thickness]);
+            translate([x-thickness, thickness+1-0.5, -x/6+h_hole/4])
+                cube([thickness, x/4+1, h_hole]);
+            translate([x-thickness, y-(thickness+1+x/4)-0.5, -x/6+h_hole/4])
+                cube([thickness, x/4+1, h_hole]);
 
-            translate([0, thickness+1-0.5, -x/4])
-                cube([thickness, x/4+1, 4*thickness]);
-            translate([0, y-(thickness+1+x/4)-0.5, -x/4])
-                cube([thickness, x/4+1, 4*thickness]);
+            translate([0, thickness+1-0.5, -x/6+h_hole/4])
+                cube([thickness, x/4+1, h_hole]);
+            translate([0, y-(thickness+1+x/4)-0.5, -x/6+h_hole/4])
+                cube([thickness, x/4+1, h_hole]);
         }
     }
 
@@ -55,15 +56,15 @@ module SnapHook(x, y, z_box, z_cap, thickness) {
         }
 
         // hook
-        translate([x-thickness-1, thickness+1, -x/4])
-            SH_Hook(4*thickness, x/4);
-        translate([x-thickness-1, y-(thickness+1+x/4), -x/4])
-            SH_Hook(4*thickness, x/4);
+        translate([x-thickness-1, thickness+1, -x/6])
+            SH_Hook(2.2*thickness, x/4);
+        translate([x-thickness-1, y-(thickness+1+x/4), -x/6])
+            SH_Hook(2.2*thickness, x/4);
         mirror([1, 0, 0]) {
-            translate([-thickness-1, thickness+1, -x/4])
-                SH_Hook(4*thickness, x/4);
-            translate([-thickness-1, y-(thickness+1+x/4), -x/4])
-                SH_Hook(4*thickness, x/4);
+            translate([-thickness-1, thickness+1, -x/6])
+                SH_Hook(2.2*thickness, x/4);
+            translate([-thickness-1, y-(thickness+1+x/4), -x/6])
+                SH_Hook(2.2*thickness, x/4);
         }
     }
     // for printing -----------------------------------------------------
