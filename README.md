@@ -3,22 +3,23 @@
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Drunkar/openscad_modules/blob/master/LICENSE.txt)
 ![build status](https://circleci.com/gh/Drunkar/openscad_modules.svg?style=shield&circle-token=479a14ac21de4b994b8f90dee2d97d85964884c1)
 
-<!-- MarkdownTOC -->
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [ArcOfCylinder](#arcofcylinder)
-- [CylinderCircle](#cylindercircle)
-- [CylinderCircleHorizontal](#cylindercirclehorizontal)
-- [ExtendablePipe](#extendablepipe)
-- [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
-- [HoneyCombCylinder](#honeycombcylinder)
-- [HoneyCombCylinderConvex](#honeycombcylinderconvex)
-- [HoneyCombPlate](#honeycombplate)
-- [Pipe](#pipe)
-- [PipeCircle](#pipecircle)
-- [SpaceFrameTrussBeam](#spaceframetrussbeam)
-- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
+	- [ArcOfCylinder](#arcofcylinder)
+	- [CylinderCircle](#cylindercircle)
+	- [CylinderCircleHorizontal](#cylindercirclehorizontal)
+	- [ExtendablePipe](#extendablepipe)
+	- [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
+	- [HoneyCombCylinder](#honeycombcylinder)
+	- [HoneyCombCylinderConvex](#honeycombcylinderconvex)
+	- [HoneyCombPlate](#honeycombplate)
+	- [Pipe](#pipe)
+	- [PipeCircle](#pipecircle)
+	- [Prism](#prism)
+	- [SpaceFrameTrussBeam](#spaceframetrussbeam)
+	- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 
 ### ArcOfCylinder
