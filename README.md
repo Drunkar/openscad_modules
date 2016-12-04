@@ -184,8 +184,10 @@ Prism(x=10, y=5, h=30);
 ### SnapCap
 
 ```
-SnapCap(x=20, y=20, z_box=10, z_cap=5, thickness=1, h_mount=0.6);
+SnapCap(x=20, y=20, z_box=10, z_cap=5, thickness=1, h_mount=0.6, type="both");
 ```
+
+* Type can take "both", "bottom" or "cap".
 
 ![SnapCap.png](https://github.com/Drunkar/openscad_modules/blob/images/SnapCap.png)
 
@@ -193,8 +195,10 @@ SnapCap(x=20, y=20, z_box=10, z_cap=5, thickness=1, h_mount=0.6);
 ### SnapHook
 
 ```
-SnapHook(x=20, y=20, z_box=10, z_cap=5, thickness=1);
+SnapHook(x=20, y=20, z_box=10, z_cap=5, thickness=1, type="both");
 ```
+
+* Type can take "both", "bottom" or "cap".
 
 ![SnapHook.png](https://github.com/Drunkar/openscad_modules/blob/images/SnapHook.png)
 
