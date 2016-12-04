@@ -16,6 +16,7 @@
 	- [Pipe](#pipe)
 	- [PipeCircle](#pipecircle)
 	- [Prism](#prism)
+	- [SnapCap](#snapcap)
 	- [SnapHook](#snaphook)
 	- [SpaceFrameTrussBeam](#spaceframetrussbeam)
 	- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
@@ -177,6 +178,15 @@ Prism(x=10, y=5, h=30);
 ```
 
 ![Prism.png](https://github.com/Drunkar/openscad_modules/blob/images/Prism.png)
+
+
+### SnapCap
+
+```
+SnapCap(x=20, y=20, z_box=10, z_cap=5, thickness=1, h_mount=0.6);
+```
+
+![SnapCap.png](https://github.com/Drunkar/openscad_modules/blob/images/SnapCap.png)
 
 
 ### SnapHook
