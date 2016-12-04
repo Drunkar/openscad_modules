@@ -25,7 +25,7 @@ module SnapCap(x, y, z_box, z_cap, thickness, h_mount, type="both") {
         cube([w, h, w]);
     }
 
-    if (TYPE == "bottom" || TYPE == "both") {
+    if (type == "bottom" || type == "both") {
         // box
         difference() {
             cube([x, y, z_box]);
@@ -42,7 +42,7 @@ module SnapCap(x, y, z_box, z_cap, thickness, h_mount, type="both") {
         }
     }
 
-    if (TYPE == "cap" || TYPE == "both") {
+    if (type == "cap" || type == "both") {
         // cap
         // for printing -----------------------------------------------------
 

@@ -24,7 +24,7 @@ module SnapHook(x, y, z_box, z_cap, thickness, type="both") {
         cube([1, h, 2*w]);
     }
 
-    if (TYPE == "bottom" || TYPE == "both") {
+    if (type == "bottom" || type == "both") {
         // box
         difference() {
             cube([x, y, z_box]);
@@ -47,7 +47,7 @@ module SnapHook(x, y, z_box, z_cap, thickness, type="both") {
         }
     }
 
-    if (TYPE == "cap" || TYPE == "both") {
+    if (type == "cap" || type == "both") {
         // cap
         // for printing -----------------------------------------------------
         rotate([0, 180, 0])
