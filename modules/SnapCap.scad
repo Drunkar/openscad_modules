@@ -10,20 +10,21 @@ H_MOUNT = 0.6;
 // ["bottom", "cap", "both"]
 TYPE = "both";
 
+module SC_Hook(w, h) {
+    // prism hook
+    rotate([90, 0, 0])
+        translate([0, 0, -h])
+            Prism(x=2*w, y=w, h=h);
+
+    // arm
+    cube([1, h, 4*w+1]);
+
+     // mounter
+    translate([-w, 0, 4*w+1-w])
+    cube([w, h, w]);
+}
+
 module SnapCap(x, y, z_box, z_cap, thickness, h_mount, type="both") {
-    module SC_Hook(w, h) {
-        // prism hook
-        rotate([90, 0, 0])
-            translate([0, 0, -h])
-                Prism(x=2*w, y=w, h=h);
-
-        // arm
-        cube([1, h, 4*w+1]);
-
-        // mounter
-        translate([-w, 0, 4*w+1-w])
-        cube([w, h, w]);
-    }
 
     if (type == "bottom" || type == "both") {
         // box
