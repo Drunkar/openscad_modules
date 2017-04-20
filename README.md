@@ -6,21 +6,22 @@
 
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:0 orderedList:0 -->
 
-- [ArcOfCylinder](#arcofcylinder)
-- [CylinderCircle](#cylindercircle)
-- [CylinderCircleHorizontal](#cylindercirclehorizontal)
-- [ExtendablePipe](#extendablepipe)
-- [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
-- [HoneyCombCylinder](#honeycombcylinder)
-- [HoneyCombCylinderConvex](#honeycombcylinderconvex)
-- [HoneyCombPlate](#honeycombplate)
-- [Pipe](#pipe)
-- [PipeCircle](#pipecircle)
-- [Prism](#prism)
-- [SnapCap](#snapcap)
-- [SnapHook](#snaphook)
-- [SpaceFrameTrussBeam](#spaceframetrussbeam)
-- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
+	- [ArcOfCylinder](#arcofcylinder)
+	- [CoverForBox](#coverforbox)
+	- [CylinderCircle](#cylindercircle)
+	- [CylinderCircleHorizontal](#cylindercirclehorizontal)
+	- [ExtendablePipe](#extendablepipe)
+	- [HexaCylinderCircleHorizontal](#hexacylindercirclehorizontal)
+	- [HoneyCombCylinder](#honeycombcylinder)
+	- [HoneyCombCylinderConvex](#honeycombcylinderconvex)
+	- [HoneyCombPlate](#honeycombplate)
+	- [Pipe](#pipe)
+	- [PipeCircle](#pipecircle)
+	- [Prism](#prism)
+	- [SnapCap](#snapcap)
+	- [SnapHook](#snaphook)
+	- [SpaceFrameTrussBeam](#spaceframetrussbeam)
+	- [TrussBeamTwoDimensions](#trussbeamtwodimensions)
 
 <!-- /TOC -->
 
@@ -34,7 +35,16 @@ ArcOfCylinder(r_outer=5, r_inner=4, height=10, angle=280);
 ![ArcOfCylinder.png](https://github.com/Drunkar/openscad_modules/blob/images/ArcOfCylinder.png)
 
 
-* CoverForBox
+### BananaJackMounter
+
+```
+BananaJackMounter($fn=50);
+```
+
+![BananaJackMounter.png](https://github.com/Drunkar/openscad_modules/blob/images/BananaJackMounter.png)
+
+
+### CoverForBox
 
 ```
 CoverForBox(
@@ -67,6 +77,15 @@ CylinderCircleHorizontal(num_cylinder=6, r_circle=14, r_cylinder=1, h_cylinder=5
 ```
 
 ![CylinderCircleHorizontal.png](https://github.com/Drunkar/openscad_modules/blob/images/CylinderCircleHorizontal.png)
+
+
+### DiamondColumns
+
+```
+DiamondColumns(num_x=4, num_y=6, h=3, r_hole_max=3);
+```
+
+![DiamondColumns.png](https://github.com/Drunkar/openscad_modules/blob/images/DiamondColumns.png)
 
 
 ### ExtendablePipe
@@ -181,6 +200,24 @@ Prism(x=10, y=5, h=30);
 ![Prism.png](https://github.com/Drunkar/openscad_modules/blob/images/Prism.png)
 
 
+### RoundedCube
+
+```
+RoundedCube(x=10, y=10, z=10, r=2, $fn=50);
+```
+
+![RoundedCube.png](https://github.com/Drunkar/openscad_modules/blob/images/RoundedCube.png)
+
+
+### RoundedRectangle
+
+```
+RoundedRectangle(x=50, y=30, thickness=THICKNESS, r=2, thickness=2, $fn=50);
+```
+
+![RoundedRectangle.png](https://github.com/Drunkar/openscad_modules/blob/images/RoundedRectangle.png)
+
+
 ### SnapCap
 
 ```
@@ -198,7 +235,7 @@ SnapCap(x=20, y=20, z_box=10, z_cap=5, thickness=1, h_mount=0.6, type="both");
 SnapHook(x=20, y=20, z_box=10, z_cap=5, thickness=1, type="both");
 ```
 
-* Type can take "both", "bottom" or "cap".
+- Type can take "both", "bottom" or "cap".
 
 ![SnapHook.png](https://github.com/Drunkar/openscad_modules/blob/images/SnapHook.png)
 
