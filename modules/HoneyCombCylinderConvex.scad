@@ -19,7 +19,7 @@ module HoneyCombCylinderConvex(num_row_of_hex, num_hex_in_row,
             for ( i = [0 : num_row_of_hex] ) {
                 offset_rotation = 0;
                 if (i % 2 == 0) {
-                    translate([0, 0, i*r_cylinder/1.8])
+                    translate([0, 0, i*r_honeycomb*1.9])
                         HexaCylinderCircleHorizontal(
                             num_cylinder=num_hex_in_row,
                             r_circle=r_cylinder-2,
@@ -28,7 +28,7 @@ module HoneyCombCylinderConvex(num_row_of_hex, num_hex_in_row,
                         );
                 } else {
                     offset_rotation = (i * 360 / num_hex_in_row)/2;
-                    translate([0, 0, i*r_cylinder/1.8])
+                    translate([0, 0, i*r_honeycomb*1.9])
                         rotate(offset_rotation, [0, 0, 1])
                             HexaCylinderCircleHorizontal(
                                 num_cylinder=num_hex_in_row,
