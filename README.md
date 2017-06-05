@@ -148,7 +148,8 @@ HoneyCombCylinderConvex(
     r_honeycomb=3,
     h_honeycomb=5,
     offset_top=3,
-    offset_bottom=5
+    offset_bottom=5,
+    vertical_mergin_coefficient=1.9
 );
 ```
 
