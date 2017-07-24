@@ -8,6 +8,7 @@
 
 - [ArcOfCylinder](#arcofcylinder)
 - [BananaJackMounter](#bananajackmounter)
+- [BicycleTireDunlopValve](#bicycletiredunlopvalve)
 - [CoverForBox](#coverforbox)
 - [CylinderCircle](#cylindercircle)
 -[CylinderCircleHorizontal](#cylindercirclehorizonta)
@@ -19,6 +20,7 @@
 - [HoneyCombPlate](#honeycombplate)
 - [Pipe](#pipe)
 - [PipeCircle](#pipecircle)
+- [PlasticBottleCap](#plasticbottlecap)
 - [Prism](#prism)
 - [RoundedCube](#roundedcube)
 - [RoundedRectangle](#roundedrectangle)
@@ -46,6 +48,15 @@ BananaJackMounter($fn=50);
 ```
 
 ![BananaJackMounter.png](https://github.com/Drunkar/openscad_modules/blob/images/BananaJackMounter.png)
+
+
+### BicycleTireDunlopValve
+
+```
+BicycleTireDunlopValve($fn=100);
+```
+
+![BicycleTireDunlopValve.png](https://github.com/Drunkar/openscad_modules/blob/images/BicycleTireDunlopValve.png)
 
 
 ### CoverForBox
@@ -194,6 +205,15 @@ PipeCircle(
 ```
 
 ![PipeCircle.png](https://github.com/Drunkar/openscad_modules/blob/images/PipeCircle.png)
+
+
+### PlasticBottleCap
+
+```
+PlasticBottleCap($fn=100);
+```
+
+![PlasticBottleCap.png](https://github.com/Drunkar/openscad_modules/blob/images/PlasticBottleCap.png)
 
 
 ### Prism
